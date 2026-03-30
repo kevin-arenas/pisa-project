@@ -1,0 +1,10 @@
+version: "3.9"
+services:
+  notebook:
+    build: .
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./:/workspace # tu código se sincroniza en vivo
+      - ./data:/workspace/data # la data también, pero no va a git
+    restart: unless-stopped
