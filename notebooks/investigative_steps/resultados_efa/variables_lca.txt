@@ -1,0 +1,41 @@
+VARIABLES PARA LCA
+============================================================
+
+OPCIÓN 1: Factores extraídos
+----------------------------------------
+  - Factor_1
+  - Factor_2
+  - Factor_3
+  - Factor_4
+  - Factor_5
+  - Factor_6
+  - Factor_7
+  - Factor_8
+
+
+OPCIÓN 2: Variables con alta comunalidad (>0.5)
+----------------------------------------
+  - ESCS
+  - CM155Q01TT
+  - CM155Q02TT
+  - CM033Q01TT
+  - CM474Q01TT
+  - CM033Q01A
+  - CM474Q01F
+  - CM033Q01F
+  - HOMEPOS
+  - CM474Q01A
+  - HISEI
+  - CM155Q02A
+
+
+OPCIÓN 3: Variables representativas por factor
+----------------------------------------
+  - ESCS
+  - CM033Q01TT
+  - CM155Q02TT
+  - CM155Q01TT
+  - CM474Q01F
+  - CM155Q02F
+  - CM474Q01TT
+  - CM033Q01A
