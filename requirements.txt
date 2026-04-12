@@ -2,9 +2,12 @@ jupyterlab
 pandas
 numpy
 scipy
-scikit-learn
+factor-analyzer==0.4.1
+scikit-learn==1.2.2
+
 matplotlib
 seaborn
 statsmodels
 pingouin        # estadística frecuentista/bayesiana
 pyarrow         # si usas Parquet
+
