@@ -2,8 +2,8 @@ jupyterlab
 pandas
 numpy
 scipy
-factor-analyzer==0.4.1
-scikit-learn==1.2.2
+factor-analyzer
+scikit-learn==1.5.2
 
 matplotlib
 seaborn
