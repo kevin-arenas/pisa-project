@@ -4,10 +4,11 @@ numpy
 scipy
 factor-analyzer
 scikit-learn==1.5.2
+girth           # aplicar IRT python
+stepmix         #
 
 matplotlib
 seaborn
 statsmodels
 pingouin        # estadística frecuentista/bayesiana
 pyarrow         # si usas Parquet
-
