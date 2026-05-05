@@ -1,0 +1,21 @@
+{
+    "fecha": "2025-11-07 19:42:06",
+    "n_observaciones": 6968,
+    "n_variables_efa": 18,
+    "n_factores_extraidos": 8,
+    "varianza_explicada": 61.75433279292167,
+    "kmo_global": 0.4975876495387475,
+    "bartlett_p_valor": 0.0,
+    "factores_nombrados": {
+        "Factor_1": "Factor_1",
+        "Factor_2": "Factor_2",
+        "Factor_3": "Factor_3",
+        "Factor_4": "Factor_4",
+        "Factor_5": "Factor_5",
+        "Factor_6": "Factor_6",
+        "Factor_7": "Factor_7",
+        "Factor_8": "Factor_8"
+    },
+    "metodo_extraccion": "minres",
+    "rotacion": "varimax"
+}

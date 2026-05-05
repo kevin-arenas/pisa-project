@@ -1,0 +1,29 @@
+# VARIABLES CRÍTICAS IDENTIFICADAS PARA ANÁLISIS PISA
+# Generado automáticamente
+
+variables_criticas = [
+    'PV9MATH',
+    'PV4SCIE',
+    'PV5READ',
+    'ESCS',
+    'HOMEPOS',
+    'HISEI',
+    'LANGTEST_QQQ_stu',
+    'LANGTEST_QQQ_sch',
+    'ST004D01T',
+    'LANGTEST_COG',
+    'LANGTEST_PAQ',
+    'AGE',
+    'IMMIG',
+    'LANGN',
+    'PV6MATH',
+    'PV8MATH',
+    'PV4MATC',
+    'PV1MATC',
+    'PV10MATC',
+    'PV7MATH',
+    'PV3MATC',
+    'PV8MATC',
+    'PV7MATC',
+    'PV4MATH',
+]
