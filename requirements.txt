@@ -12,3 +12,4 @@ seaborn
 statsmodels
 pingouin        # estadística frecuentista/bayesiana
 pyarrow         # si usas Parquet
+pyreadstat
