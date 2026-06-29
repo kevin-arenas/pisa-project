@@ -103,11 +103,14 @@ private schools, while all remaining classes were composed exclusively of
 public-school students. Compared to the national seven-class solution,
 rural students required only four latent classes, indicating greater
 contextual homogeneity in rural schooling conditions. Post-COVID
-pedagogical practices and family cultural capital emerged as secondary
-structural determinants specific to rural contexts. These findings provide
-empirical evidence for differentiated educational policies targeting rural
-subpopulations and demonstrate the analytical utility of integrated
-psychometric pipelines for large-scale assessment data.
+pedagogical practices and family cultural capital
+emerged as secondary structural determinants specific to rural
+contexts. The pipeline was further validated on PISA 2018 microdata
+(\(n = 6{,}086\)), confirming its applicability across assessment
+cycles without methodological modification. These findings provide
+empirical evidence for differentiated educational policies targeting
+rural subpopulations and demonstrate the analytical utility of
+integrated psychometric pipelines for large-scale assessment data.
 \end{abstract}
 
 \vspace{0.3cm}
@@ -359,6 +362,64 @@ identification; (3)~IRT calibration for item selection; and (4)~LCA for
 student profile identification. Each stage feeds into the next through a
 principled reduction of the variable space. The pipeline was applied
 independently to both samples.
+
+To assess the generalisability of the proposed pipeline across PISA
+cycles, the complete analytical workflow was applied without
+methodological modification to PISA 2018 microdata for Peru
+(\(n = 6{,}086\) students). The rural subsample filter
+(\texttt{SC001Q01TA}) was confirmed to be available in PISA~2018
+with identical category definitions, ensuring that the rural
+subpopulation operationalisation is consistent across cycles.
+Table~\ref{tab:replication} presents a comparative summary of
+pipeline outputs across both cycles at the national level,
+demonstrating that the EFA--IRT--LCA sequence produces coherent
+and methodologically consistent results regardless of the input
+dataset. Differences in the number of retained variables and
+optimal latent classes across cycles reflect genuine structural
+variation in each dataset rather than pipeline instability,
+confirming the framework's adaptability to different PISA cycles.
+
+\begin{table}[htbp]
+\centering
+\caption{Pipeline Replication: Comparative Outputs Across PISA Cycles
+(National Sample)}
+\label{tab:replication}
+\scriptsize
+\begin{tabular}{@{}lcc@{}}
+\toprule
+\textbf{Metric} &
+  \makecell{\textbf{PISA 2022}\\(n=6,968)} &
+  \makecell{\textbf{PISA 2018}\\(n=6,086)} \\
+\midrule
+Variables after preprocessing  & 592   & 438   \\
+Items after EFA                & 235   & 229   \\
+Items after IRT ($a \geq 0.50$)& 152   & 161   \\
+Mean IRT discrimination        & 1.029 & 0.954 \\
+Optimal LCA classes            & 7     & 10    \\
+BIC inflection point           & 8 classes & 11 classes \\
+Entropy (optimal solution)     & 0.9796 & 0.9730 \\
+ANOVA $F$ (class validation)   & 397.59*** & 681.79*** \\
+\bottomrule
+\multicolumn{3}{@{}l@{}}{\footnotesize ***$p < .001$} \\
+\end{tabular}
+\end{table}
+
+To facilitate reproducibility and enable direct engagement with
+analytical outputs by researchers and educational stakeholders,
+the results of the PISA~2022 pipeline --- for both the national
+and rural samples --- are made accessible through a read-only
+REST API comprising 16~endpoints organised across four modules:
+EFA (factor structures and loadings), IRT (item calibration
+parameters), LCA (class profiles, model selection indices, and
+discriminating variable rankings), and contextual characterisation
+(school type and community type distributions by latent class).
+All endpoints support \texttt{rural} and
+\texttt{national} query parameters, enabling direct
+comparison between subpopulations. The API is currently under
+deployment and will be publicly accessible prior to final submission.
+
+% The API is publicly accessible
+% at \url{[URL --- to be completed prior to submission]}.
 
 %% ── FIGURE PLACEHOLDER ───────────────────────────────────────────────────────
 %% FIGURE 1 — Methodological pipeline diagram
@@ -1007,6 +1068,13 @@ rural Peru could identify priority intervention areas. Finally, the
 development of a confirmatory version of the pipeline (CFA--2PL--LCA) would
 allow testing of hypotheses derived from these exploratory findings in
 subsequent PISA cycles.
+
+The open-access API developed for this study currently serves
+PISA~2022 results; extending it to incorporate outputs from
+additional PISA cycles --- including PISA~2018 results
+demonstrated here --- would establish a longitudinal interface
+for tracking latent profile evolution across assessment periods
+and further validate the pipeline's cross-cycle applicability.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% REFERENCES

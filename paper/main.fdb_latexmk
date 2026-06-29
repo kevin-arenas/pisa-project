@@ -1,14 +1,14 @@
 # Fdb version 4
-["biber main"] 1778518535.35293 "main.bcf" "main.bbl" "main" 1782363724.56177 0
-  "main.bcf" 1782363724.43819 136463 225db39d9ecf984319a07d40f2207dc8 "pdflatex"
+["biber main"] 1778518535.35293 "main.bcf" "main.bbl" "main" 1782701595.34424 0
+  "main.bcf" 1782701595.16454 136463 225db39d9ecf984319a07d40f2207dc8 "pdflatex"
   "references.bib" 1778515605.17806 11464 e74c8414670b7f5c2a757c963bdb4e91 ""
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1782363722.4594 "/run/media/kevin/Disco local/projects/university/tesis/pisa-project/paper/main.tex" "main.pdf" "main" 1782363724.56242 0
-  "/dev/null" 1782307944.59529 0 d41d8cd98f00b204e9800998ecf8427e ""
-  "/run/media/kevin/Disco local/projects/university/tesis/pisa-project/paper/main.tex" 1782363722.20222 53049 b24ffb1b3d2dbe80b5b03fb575ee0a7d ""
+["pdflatex"] 1782701591.38148 "/run/media/kevin/Disco local/projects/university/tesis/pisa-project/paper/main.tex" "main.pdf" "main" 1782701595.34504 0
+  "/dev/null" 1782699760.32074 0 d41d8cd98f00b204e9800998ecf8427e ""
+  "/run/media/kevin/Disco local/projects/university/tesis/pisa-project/paper/main.tex" 1782701590.79554 56233 c66c3743aab7234d2a915d0d83876eb4 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm0700.tfm" 1136768653 1536 73da8e8f1d2a4c957d51ca133585586b ""
@@ -168,10 +168,10 @@
   "graphics/fig5_heatmap_perf_clas_rural.png" 1778519168.89232 645626 b32506d262fd7d556f42b39c17403595 ""
   "graphics/fig6_contexto_clases_rural_vert.png" 1778518703.52875 123727 18f3ea4fe679a7186196ea6f50782a24 ""
   "graphics/pipeline.svg" 1778515605.11976 352264 800a96d629fbac476ff08ae18138e13e ""
-  "main.aux" 1782363724.43422 14762 44ad0e629dfbff421960426c4bcfe485 "pdflatex"
+  "main.aux" 1782701595.15794 14986 3bcf0c7934a75f61a1242fa7b8f22fae "pdflatex"
   "main.bbl" 1778518535.98927 70626 529d75fa21ceaa7e48090c7619da2b48 "biber main"
-  "main.run.xml" 1782363724.43932 2427 d1bfcd6d722f5bf4e724fdcb22d9bbf2 "pdflatex"
-  "main.tex" 1782363722.20222 53049 b24ffb1b3d2dbe80b5b03fb575ee0a7d ""
+  "main.run.xml" 1782701595.16601 2427 d1bfcd6d722f5bf4e724fdcb22d9bbf2 "pdflatex"
+  "main.tex" 1782701590.79554 56233 c66c3743aab7234d2a915d0d83876eb4 ""
   "svg-inkscape/pipeline_svg-tex.pdf" 1778518534.28718 122110 85975e9eda236078c20c41358fed2850 ""
   "svg-inkscape/pipeline_svg-tex.pdf_tex" 1778518534.28753 2081 83aec0074b24de7b8bc8674f73827cd5 ""
   (generated)
