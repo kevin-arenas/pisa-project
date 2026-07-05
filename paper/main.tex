@@ -191,6 +191,12 @@ against the full national sample to identify which latent determinants are
 context-specific and which reflect broader structural patterns in Peruvian
 education.
 
+To further demonstrate the generalisability of the proposed
+framework, the pipeline was additionally applied to PISA~2018
+microdata for Peru (\(n = 6{,}086\)), confirming that the
+analytical workflow operates consistently across assessment
+cycles without requiring methodological modifications.
+
 The remainder of this paper is organised as follows. Section~2 reviews
 relevant literature on latent variable methods applied to large-scale
 assessments and on educational inequality in Latin America. Section~3
@@ -354,6 +360,11 @@ the community in which each school is located. Two categories were retained:
 definition yielded 3,720~rural students (53.4\% of the national sample). The
 full national sample was retained as a comparative baseline.
 
+Note that the rural subsample (\(n = 3{,}720\)) is nested
+within the national sample (\(n = 6{,}968\)); all subsequent
+analyses treat these as two distinct analytical lenses applied
+to the same dataset rather than independent samples.
+
 \subsection{Analytical Pipeline Overview}
 
 The analysis follows a sequential four-stage pipeline: (1)~data
@@ -513,7 +524,30 @@ at loading $\geq 0.40$.
 Table~\ref{tab:efa_blocks} presents adequacy statistics and outcomes for
 the rural sample.
 
-\begin{table}[htbp]
+% \begin{table}[htbp]
+% \centering
+% \caption{EFA Results by Questionnaire Block (Rural Sample)}
+% \label{tab:efa_blocks}
+% \scriptsize
+% \begin{tabular}{@{}lccccc@{}}
+% \toprule
+% \textbf{Block} & \textbf{Items} & \textbf{KMO} &
+%   \textbf{Status} & \textbf{Factors} & \makecell{\textbf{Items}\\retained} \\
+% \midrule
+% Student (ST)   & 136 & 0.809 & Adequate    & 10 & 47 \\
+% School A (SC\_a) & 99 & 0.485 & Excluded  & ---  &  0 \\
+% School B (SC\_b) & 92 & 0.546 & Acceptable & 6  & 34 \\
+% School C (SC\_c) &109 & 0.557 & Acceptable & 6  & 49 \\
+% Financial (FL) &  93 & 0.895 & Adequate    &  8 & 51 \\
+% Other          &  43 & 0.664 & Adequate    &  5 & 17 \\
+% \midrule
+% \textbf{Total} & \textbf{572} & & & \textbf{35} & \textbf{198} \\
+% \bottomrule
+% \end{tabular}
+% \end{table}
+
+
+\begin{table*}[htbp]
 \centering
 \caption{EFA Results by Questionnaire Block (Rural Sample)}
 \label{tab:efa_blocks}
@@ -521,19 +555,20 @@ the rural sample.
 \begin{tabular}{@{}lccccc@{}}
 \toprule
 \textbf{Block} & \textbf{Items} & \textbf{KMO} &
-  \textbf{Status} & \textbf{Factors} & \makecell{\textbf{Items}\\retained} \\
+  \textbf{Status} & \textbf{Factors} & \makecell{\textbf{Items retained}} \\
 \midrule
-Student (ST)   & 136 & 0.809 & Adequate    & 10 & 47 \\
-School A (SC\_a) & 99 & 0.485 & Excluded  & ---  &  0 \\
-School B (SC\_b) & 92 & 0.546 & Acceptable & 6  & 34 \\
-School C (SC\_c) &109 & 0.557 & Acceptable & 6  & 49 \\
-Financial (FL) &  93 & 0.895 & Adequate    &  8 & 51 \\
-Other          &  43 & 0.664 & Adequate    &  5 & 17 \\
+Student (ST)     & 136 & 0.809 & Adequate    & 10 & 47 \\
+School A (SC\_a) &  99 & 0.485 & Excluded    & --- &  0 \\
+School B (SC\_b) &  92 & 0.546 & Acceptable  &  6 & 34 \\
+School C (SC\_c) & 109 & 0.557 & Acceptable  &  6 & 49 \\
+Financial (FL)   &  93 & 0.895 & Adequate    &  8 & 51 \\
+Other            &  43 & 0.664 & Adequate    &  5 & 17 \\
 \midrule
-\textbf{Total} & \textbf{572} & & & \textbf{35} & \textbf{198} \\
+\textbf{Total}   & \textbf{572} & & & \textbf{35} & \textbf{198} \\
 \bottomrule
 \end{tabular}
-\end{table}
+\end{table*}
+
 
 The exclusion of School Block~A (KMO~$= 0.485$) in the rural sample ---
 while it was successfully processed in the national sample
@@ -650,6 +685,35 @@ The preprocessing pipeline reduced the original 7,147~variables to
 (Table~\ref{tab:preprocessing}). The additional reduction in the rural
 sample reflects greater homogeneity in item response distributions, which
 caused more variables to fail the near-zero variance criterion.
+
+\subsection{Pipeline Replication Across PISA Cycles}
+
+To validate the cross-cycle applicability of the proposed
+framework, the complete EFA--IRT--LCA pipeline was applied to
+PISA~2018 microdata for Peru (\(n = 6{,}086\)) following
+identical procedures to those described in Section~3. It is
+important to note that this replication exercise was conducted
+exclusively at the national level and was not intended to
+produce substantive interpretations of the 2018 latent profiles.
+Rather, its purpose is to demonstrate that the pipeline
+processes different PISA datasets coherently and produces
+statistically valid outputs without cycle-specific adjustments.
+The rural subsample variable (\texttt{SC001Q01TA}) was confirmed
+to be present in PISA~2018 with identical category definitions,
+establishing that rural subpopulation filtering is directly
+transferable across cycles. Table~\ref{tab:replication} (Section~3)
+summarises the pipeline outputs across both cycles. Differences
+in the number of retained variables (592 vs.\ 438) reflect
+genuine structural variation between cycles --- notably,
+PISA~2022 introduced questionnaire modules related to COVID-19
+impacts and expanded financial literacy items that were absent
+in 2018 --- rather than any instability in the analytical
+framework. The consistency of entropy values across cycles
+($0.9796$ vs.\ $0.9730$) and the statistical significance of
+between-class differences in both datasets ($F = 397.59$ and
+$F = 681.79$, both $p < .001$) confirm that the pipeline
+produces robust latent class solutions regardless of the input
+cycle.
 
 \subsection{EFA: Latent Factor Structures}
 
@@ -901,7 +965,7 @@ educational systems.
 \centering
 \includegraphics[width=0.9\linewidth]{graphics/fig6_contexto_clases_rural_vert.png}
 \caption{Contextual characterisation of latent classes — rural sample (n=3,720)}
-\label{fig:context_class_raral}
+\label{fig:context_class_rural}
 \end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
