@@ -1,0 +1,46 @@
+This is BibTeX, Version 0.99d (TeX Live 2023)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: main_springer.aux
+The style file: splncs04.bst
+Database file #1: references_springer.bib
+You've used 21 entries,
+            2850 wiz_defined-function locations,
+            723 strings with 8971 characters,
+and the built_in function-call counts, 10197 in all, are:
+= -- 831
+> -- 262
+< -- 16
++ -- 110
+- -- 87
+* -- 612
+:= -- 1296
+add.period$ -- 21
+call.type$ -- 21
+change.case$ -- 125
+chr.to.int$ -- 0
+cite$ -- 21
+duplicate$ -- 985
+empty$ -- 953
+format.name$ -- 100
+if$ -- 2210
+int.to.chr$ -- 0
+int.to.str$ -- 21
+missing$ -- 202
+newline$ -- 69
+num.names$ -- 45
+pop$ -- 360
+preamble$ -- 1
+purify$ -- 83
+quote$ -- 0
+skip$ -- 268
+stack$ -- 0
+substring$ -- 552
+swap$ -- 517
+text.length$ -- 16
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 80
+warning$ -- 0
+while$ -- 87
+width$ -- 23
+write$ -- 223

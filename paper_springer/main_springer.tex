@@ -1,0 +1,1032 @@
+% ============================================================
+% Latent Profiles of Academic Achievement Among Rural Students
+% in Peru: An Integrated EFA-IRT-LCA Analysis of PISA Data
+% Target: WAIMLAp 2026 -- Springer ACSAR series
+% Template: LLNCS (llncs.cls v2.21)
+% References: BibTeX splncs04
+% ============================================================
+
+\documentclass[runningheads]{llncs}
+
+%% ── Packages ─────────────────────────────────────────────────
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{url}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{makecell}
+\usepackage{svg}
+% \usepackage{hyperref}
+\usepackage[hidelinks]{hyperref}
+\renewcommand\UrlFont{\color{black}\rmfamily}
+
+%% ── Abbreviated running head ─────────────────────────────────
+%% Title is long; provide a short version for running heads
+\newcommand{\shorttitle}{Latent Profiles of Academic Achievement in Rural Peru}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{Latent Profiles of Academic Achievement Among Rural
+Students in Peru: An Integrated EFA--IRT--LCA Analysis of
+PISA Data}
+
+\titlerunning{\shorttitle}
+
+% \author{Kevin Maximiliano Arenas Cancapa\thanks{Corresponding
+% author: \email{a20245026@pucp.edu.pe}} \and
+% Eric Raphael Huiza Pereyra}
+
+% \authorrunning{K.M. Arenas Cancapa and E.R. Huiza Pereyra}
+
+% \institute{Graduate Program in Computer Science,
+% Pontifical Catholic University of Peru, Lima, Peru\\
+% \email{a20245026@pucp.edu.pe}}
+
+\maketitle
+
+%% ── Abstract ─────────────────────────────────────────────────
+\begin{abstract}
+Academic underperformance in rural Peru represents a persistent
+structural challenge, yet the latent factors driving achievement
+gaps in these contexts remain poorly understood. This study
+applies an integrated pipeline of Exploratory Factor Analysis
+(EFA), Item Response Theory (IRT), and Latent Class Analysis
+(LCA) to PISA 2022 microdata, analysing both the full Peruvian
+sample (\(n = 6{,}968\)) and a rural subsample (\(n = 3{,}720\))
+defined by community size. EFA across six item blocks identified
+35 latent factors in the rural sample, subsequently refined
+through IRT screening to 129 high-discrimination items
+(mean \(a = 1.109\)). LCA revealed four distinct rural student
+profiles --- high-performing (20.6\%, \(M = 446\) pts),
+medium (25.2\%, \(M = 398\) pts), medium-low (17.2\%,
+\(M = 382\) pts), and low-performing (37.0\%, \(M = 355\) pts)
+--- with significant between-class differences
+(\(F = 327.43\), \(p < .001\)). School management type was the
+dominant discriminating factor (\(F = 5{,}430\)): 93.5\% of
+high-performing rural students attended private schools, while
+all remaining classes were composed exclusively of
+public-school students. Compared to the national seven-class
+solution, rural students required only four latent classes,
+indicating greater contextual homogeneity in rural schooling
+conditions. School creativity climate and family cultural
+capital emerged as secondary structural determinants specific to
+rural contexts. The pipeline was further validated on PISA 2018
+microdata (\(n = 6{,}086\)), confirming its applicability across
+assessment cycles without methodological modification. These
+findings provide empirical evidence for differentiated
+educational policies targeting rural subpopulations and
+demonstrate the analytical utility of integrated psychometric
+pipelines for large-scale assessment data.
+
+\keywords{PISA 2022 \and Latent Class Analysis \and Item
+Response Theory \and Exploratory Factor Analysis \and Rural
+Education \and Academic Achievement \and Peru \and Educational
+Inequality \and Latent Variables \and Educational Data Science}
+\end{abstract}
+
+%% ─────────────────────────────────────────────────────────────
+\section{Introduction}
+%% ─────────────────────────────────────────────────────────────
+
+Academic performance in secondary education constitutes a
+critical indicator of both educational quality and long-term
+social development. In Peru, results from the 2022 cycle of the
+Programme for International Student Assessment (PISA) ---
+conducted by the Organisation for Economic Co-operation and
+Development (OECD) --- revealed that only approximately 47\% of
+students reached Level~2 or above in Science, 34\% in
+Mathematics, and 50\% in Reading, meaning that more than half
+of assessed students failed to achieve basic proficiency
+levels~\cite{oecd2023pisaPeru}.
+
+Rural schools in Peru operate under compounded structural
+constraints that may generate patterns of underperformance
+substantively different from those observed in urban contexts.
+This distinction matters analytically: the factors driving low
+achievement in rural settings --- including teacher shortages,
+limited digital infrastructure, and high socioeconomic
+vulnerability --- may not be the same as those operating in
+urban schools, suggesting that national-level analyses risk
+obscuring context-specific mechanisms. Empirical support for
+this differentiation comes from the national PISA~2022 results
+report, which documents a stark stratification: only 11.0\% of
+rural students reached basic proficiency in Mathematics, 21.8\%
+in Science, and 21.0\% in Reading, compared to 38.7\%, above
+50\%, and above 50\%, respectively, among urban
+students~\cite{minedu2024pisareporte}. These gaps motivate the
+present study's focus on rural subpopulations as a distinct
+analytical unit rather than a subset of the national sample.
+
+Understanding what drives these performance gaps requires moving
+beyond observed variables to examine the latent constructs that
+shape learning conditions. Contextual factors such as family
+cultural capital, pedagogical quality, school governance, and
+financial literacy operate as unobservable dimensions that
+influence student achievement without being directly measurable
+in standard assessments. Large-scale datasets such as PISA
+provide rich contextual information through student, school, and
+teacher questionnaires, but their analytical potential is often
+underutilised when studies rely solely on regression approaches
+or focus on single predictors in
+isolation~\cite{rutkowski2010secondary}.
+
+Addressing these unobservable dimensions requires methods
+specifically designed for latent variable inference. Recent
+advances in educational data science have demonstrated the value
+of integrating psychometric and machine learning methods to
+extract richer insights from large-scale assessment data.
+Exploratory Factor Analysis (EFA) enables dimensionality
+reduction across high-dimensional questionnaire data; Item
+Response Theory (IRT) provides principled item selection based
+on discrimination and difficulty parameters; and Latent Class
+Analysis (LCA) identifies distinct subpopulations with shared
+contextual profiles. When applied sequentially, these methods
+constitute a principled pipeline for moving from raw survey data
+to interpretable student typologies. However, few studies have
+applied such integrated pipelines to PISA data in Latin American
+contexts, and fewer still have examined rural subpopulations
+specifically. To our knowledge, no prior study has applied an
+integrated EFA--IRT--LCA pipeline to PISA data focusing on rural
+students in Peru or any comparable LAC context.
+
+This study addresses that gap by applying an integrated
+EFA--IRT--LCA pipeline to PISA~2022 microdata for Peru, with a
+primary focus on rural students. The analysis pursues three
+specific objectives: (i)~to identify latent dimensions
+underlying student, school, and family contextual variables
+through EFA across multiple questionnaire blocks; (ii)~to refine
+item selection using IRT discrimination parameters; and
+(iii)~to characterise distinct latent profiles of rural students
+and examine their association with academic achievement across
+mathematics, reading, and science domains. Additionally, results
+from the rural subsample are systematically compared against the
+full national sample to identify which latent determinants are
+context-specific and which reflect broader structural patterns
+in Peruvian education.
+
+To further demonstrate the generalisability of the proposed
+framework, the pipeline was additionally applied to PISA~2018
+microdata for Peru (\(n = 6{,}086\)), confirming that the
+analytical workflow operates consistently across assessment
+cycles without requiring methodological modifications.
+
+The remainder of this paper is organised as follows.
+Section~\ref{sec:related} reviews relevant literature.
+Section~\ref{sec:method} describes the data sources, pipeline,
+and analytical methods. Section~\ref{sec:results} presents
+results. Section~\ref{sec:discussion} discusses findings and
+their policy implications. Section~\ref{sec:conclusions}
+presents conclusions, limitations, and directions for future
+research.
+
+%% ─────────────────────────────────────────────────────────────
+\section{Related Work}
+\label{sec:related}
+%% ─────────────────────────────────────────────────────────────
+
+\subsection{Large-Scale Assessments and Educational Inequality
+in Latin America}
+
+International large-scale assessments (ILSAs) such as PISA have
+become foundational instruments for diagnosing educational
+inequalities and informing evidence-based policy across
+participating countries~\cite{rutkowski2010secondary}. In the
+Latin American and Caribbean (LAC) region, PISA data
+consistently reveal persistent underperformance relative to OECD
+averages, a situation that the COVID-19 pandemic has
+considerably worsened. School shutdowns in the region extended
+for approximately 270~days on average, representing a disruption
+equivalent to 1.42~years of schooling, with the most vulnerable
+students experiencing the greatest learning
+losses~\cite{delprato2025resilience}.
+
+Within Peru specifically, the urban--rural achievement gap
+constitutes one of the most structurally entrenched dimensions
+of educational inequality. The urban--rural learning gap is
+largely attributed to differences in school and family
+characteristics, with urban areas showing better school
+resources and more supportive family
+environments~\cite{wang2024urbanrural}. These structural
+disadvantages are compounded by the public--private school
+divide: the self-selection of students into private schools
+deepens existing inequalities, and the effectiveness of public
+and private schools is additionally affected by their urban or
+rural location~\cite{delprato2025schools}. The COVID-19 pandemic
+introduced an additional layer of disruption that differentially
+affected rural and vulnerable student populations. Evidence from
+PISA~2022 indicates that pandemic educational policies produced
+differential effects by school type, with policies being more
+productive in private than public schools for mathematics, and
+showing divergent patterns for students in rural schools under
+longer periods of closure~\cite{delprato2025covid}. Teacher
+retention policies targeting rural schools have similarly shown
+limited reach~\cite{castro2022bonuses}.
+
+\subsection{Latent Variable Methods in Educational Research}
+
+Exploratory Factor Analysis (EFA) remains a foundational tool
+for reducing the dimensionality of large item sets and uncovering
+latent dimensions in questionnaire data~\cite{fabrigar1999efa}.
+Item Response Theory (IRT) provides a complementary framework by
+estimating item-level discrimination and difficulty parameters,
+enabling principled item selection based on psychometric
+quality~\cite{vanderlinden2016irt}. In large-scale assessments,
+plausible values --- multiple imputed proficiency estimates drawn
+from a conditional distribution to account for measurement
+uncertainty --- are the recommended unit of analysis for
+secondary research using PISA
+data~\cite{vondavier2009plausible}.
+
+Latent Class Analysis (LCA) extends the latent variable
+framework to person-centred classification, identifying
+subpopulations of individuals who share similar response
+patterns~\cite{collins2010latent}. The present study implements
+LCA using StepMix~\cite{morin2025stepmix}, an open-source
+Python package implementing pseudo-likelihood estimation for
+generalised mixture models. The combination of EFA, IRT, and LCA
+into a sequential analytical pipeline represents a
+methodological contribution with limited precedent in the
+educational data science literature.
+
+\subsection{Student Profile Analysis and Machine Learning in
+Large-Scale Assessments}
+
+Person-centred approaches to PISA data analysis have gained
+considerable momentum~\cite{gorgun2024wellbeing,yi2017lpa}.
+Explainable cluster analysis applied to PISA~2022 data has
+further shown that student profiles derived from contextual
+variables can achieve high interpretability when combined with
+feature importance methods~\cite{fernandez2024profiles}. Family
+cultural capital has been shown to exert positive direct effects
+on student cognitive performance across 71 countries in
+PISA~2022~\cite{zhang2025capital}, suggesting that
+context-specific analyses targeting rural subsamples are
+necessary to capture the heterogeneous operation of these
+constructs, consistent with Bourdieu's~\cite{bourdieu1986capital}
+foundational framework. Studies combining statistical and machine
+learning methods have demonstrated their utility for identifying
+predictors of student proficiency in PISA
+datasets~\cite{soares2024predictors}, yet such analyses for
+rural subpopulations in LAC remain scarce~\cite{delprato2025resilience}.
+
+Collectively, this body of literature establishes three
+analytical gaps: (1)~the absence of person-centred latent
+profile analyses targeting rural student populations in Peru;
+(2)~the limited application of integrated EFA--IRT--LCA
+pipelines to PISA questionnaire data; and (3)~the
+underexploration of how structural factors such as school type
+and post-pandemic pedagogical practices shape achievement
+profiles in rural educational contexts.
+
+%% ─────────────────────────────────────────────────────────────
+\section{Methodology}
+\label{sec:method}
+%% ─────────────────────────────────────────────────────────────
+
+\subsection{Data Source and Study Population}
+
+This study uses microdata from the 2022~cycle of
+PISA~\cite{oecd2023technical}. For Peru, the assessment included
+6,968~students drawn from schools across the national territory.
+Three datasets were integrated: the student context
+questionnaire (\texttt{STU\_QQQ}), the school questionnaire
+(\texttt{SCH\_QQQ}), and the teacher questionnaire
+(\texttt{TCH\_QQQ}), originally in \texttt{.SAV} format and
+converted to \texttt{.CSV}. Records were linked via student
+identifier (\texttt{CNTSTUID}) and school identifier
+(\texttt{CNTSCHID}), producing a merged dataset of
+6,968~observations and 7,147~variables prior to preprocessing.
+
+Because PISA~2022 does not provide subnational disaggregation
+for Peru, the rural subsample was defined using the school-level
+variable \texttt{SC001Q01TA}, which classifies the community in
+which each school is located. Two categories were retained:
+\textit{village, hamlet or rural area} (fewer than 3,000 people)
+and \textit{small town} (3,000 to approximately 15,000 people).
+This operational definition yielded 3,720~rural students
+(53.4\% of the national sample). Note that the rural subsample
+(\(n = 3{,}720\)) is nested within the national sample
+(\(n = 6{,}968\)); all subsequent analyses treat these as two
+distinct analytical lenses applied to the same dataset rather
+than independent samples. The full national sample was retained
+as a comparative baseline.
+
+\subsection{Analytical Pipeline Overview}
+
+The analysis follows a sequential four-stage pipeline:
+(1)~data preprocessing and variable reduction; (2)~EFA for
+latent dimension identification; (3)~IRT calibration for item
+selection; and (4)~LCA for student profile identification.
+Each stage feeds into the next through a principled reduction
+of the variable space. The pipeline was applied independently
+to both samples.
+
+To assess generalisability across PISA cycles, the complete
+analytical workflow was applied without methodological
+modification to PISA 2018 microdata for Peru (\(n = 6{,}086\)).
+The rural subsample filter (\texttt{SC001Q01TA}) was confirmed
+to be available in PISA~2018 with identical category definitions.
+Table~\ref{tab:replication} presents a comparative summary of
+pipeline outputs across both cycles at the national level.
+
+\begin{table}[!htbp]
+\centering
+\caption{Pipeline Replication: Comparative Outputs Across PISA
+Cycles (National Sample)}
+\label{tab:replication}
+\begin{tabular}{lcc}
+\toprule
+\textbf{Metric} &
+  \makecell{\textbf{PISA 2022} \\ (n=6,968)} &
+  \makecell{\textbf{PISA 2018} \\ (n=6,086)} \\
+\midrule
+Variables after preprocessing  & 592    & 438    \\
+Items after EFA                & 235    & 229    \\
+Items after IRT ($a \geq 0.50$)& 152    & 161    \\
+Mean IRT discrimination        & 1.029  & 0.954  \\
+Optimal LCA classes            & 7      & 10     \\
+BIC inflection point           & 8 cls. & 11 cls.\\
+Entropy (optimal solution)     & 0.9796 & 0.9730 \\
+ANOVA $F$ (class validation)   & 397.59*** & 681.79*** \\
+\bottomrule
+\multicolumn{3}{l}{\footnotesize ***$p < .001$}
+\end{tabular}
+\end{table}
+
+To facilitate reproducibility, the results of the PISA~2022
+pipeline --- for both the national and rural samples --- are
+made accessible through a read-only REST API comprising
+16~endpoints organised across four modules: EFA (factor
+structures and loadings), IRT (item calibration parameters),
+LCA (class profiles, model selection indices, and discriminating
+variable rankings), and contextual characterisation (school type
+and community type distributions by latent class). All endpoints
+support \texttt{rural} and \texttt{national} query parameters.
+The results of the PISA~2022 pipeline are accessible
+through a read-only REST API comprising 16~endpoints.
+% The API is available upon request to the corresponding
+% author.
+The API is available upon request.
+
+%% FIGURE 1 — Pipeline diagram
+%% Insert here: horizontal flow diagram with 5 boxes connected
+%% by arrows: [Raw PISA data] -> [Preprocessing] ->
+%% [EFA: 6 blocks] -> [IRT calibration] -> [LCA: profiles]
+%% Include variable counts below each arrow.
+\begin{figure}[!htbp]
+\centering
+\includesvg[width=0.6\textwidth]{graphics/pipeline}
+\caption{Analytical pipeline from raw PISA microdata to latent
+student profiles. Numbers indicate variable counts at each
+reduction stage (rural / national).}
+\label{fig:pipeline}
+\end{figure}
+
+\subsection{Data Preprocessing}
+
+The preprocessing stage reduced the initial 7,147-variable
+dataset through five sequential filters applied identically to
+both samples: (1)~variables with more than 40\% missing values
+were eliminated, as missingness in PISA arises structurally from
+the modular booklet design~\cite{oecd2023technical};
+(2)~identifiers, sampling weights, and OECD-derived composite
+indices were removed, with plausible values preserved separately
+as external performance anchors for LCA
+validation~\cite{vondavier2009plausible}; (3)~free-text columns
+with more than 20\% unique values were removed as uninformative
+for factor analysis; (4)~numeric columns with more than
+10~unique values were separated from the ordinal item set, as
+EFA and IRT require ordinal or categorical inputs; and
+(5)~variables in which a single category represented more than
+95\% of responses were removed. Table~\ref{tab:preprocessing}
+summarises the reduction at each stage. For variables retained
+after preprocessing, missing data averaged 7.12\% in the rural
+sample; median imputation was applied for EFA and mode
+imputation for IRT and LCA.
+
+\begin{table}[!htbp]
+\centering
+\caption{Variable Reduction at Each Preprocessing Stage}
+\label{tab:preprocessing}
+\begin{tabular}{lcc}
+\toprule
+\textbf{Stage} &
+  \makecell{\textbf{National} \\ (n=6,968)} &
+  \makecell{\textbf{Rural} \\ (n=3,720)} \\
+\midrule
+Original variables        & 7,147 & 7,147 \\
+After missing $>$40\%     & 1,134 & 1,098 \\
+After design var.\ removal &  893 &   857 \\
+After continuous sep.     &   648 &   625 \\
+After near-zero variance  & \textbf{592} & \textbf{573} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Stage 1 --- Exploratory Factor Analysis}
+
+EFA was conducted using the \texttt{factor\_analyzer} Python
+package, implementing principal axis factoring with oblimin
+rotation. Oblique rotation was preferred because educational
+constructs --- family support, school climate, student
+motivation --- are theoretically and empirically
+correlated~\cite{fabrigar1999efa}. Given the high dimensionality
+of retained variables, EFA was conducted on thematically
+coherent blocks defined by questionnaire origin and variable
+prefix, following established practice in large-scale assessment
+research~\cite{rutkowski2010secondary}. Six blocks were defined:
+student items (\texttt{ST}), three school sub-blocks
+(\texttt{SC\_a}, \texttt{SC\_b}, \texttt{SC\_c}), financial
+literacy items (\texttt{FL}), and a residual block. Prior to
+extraction, factorability was assessed via KMO and Bartlett's
+test; blocks with KMO~$< 0.50$ were excluded. Factors were
+retained using the Kaiser criterion (eigenvalue $> 1$) and items
+retained at loading $\geq 0.40$.
+
+Table~\ref{tab:efa_blocks} presents adequacy statistics and
+outcomes for the rural sample. The exclusion of School
+Block~A (KMO~$= 0.485$) in the rural sample --- while
+successfully processed in the national sample
+(KMO~$= 0.809$) --- is a substantive finding: governance and
+evaluation variables showed insufficient factorial structure in
+the rural subsample, likely reflecting the institutional
+homogeneity of rural schools in Peru.
+
+\begin{table}[!htbp]
+\centering
+\caption{EFA Results by Questionnaire Block (Rural Sample)}
+\label{tab:efa_blocks}
+\begin{tabular}{lccccc}
+\toprule
+\textbf{Block} & \textbf{Items} & \textbf{KMO} &
+  \textbf{Status} & \textbf{Factors} &
+  \makecell{\textbf{Items retained}} \\
+\midrule
+Student (ST)     & 136 & 0.809 & Adequate   & 10 & 47 \\
+School A (SC\_a) &  99 & 0.485 & Excluded   & -- &  0 \\
+School B (SC\_b) &  92 & 0.546 & Acceptable &  6 & 34 \\
+School C (SC\_c) & 109 & 0.557 & Acceptable &  6 & 49 \\
+Financial (FL)   &  93 & 0.895 & Adequate   &  8 & 51 \\
+Other            &  43 & 0.664 & Adequate   &  5 & 17 \\
+\midrule
+\textbf{Total}   & \textbf{572} & & & \textbf{35} & \textbf{198} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Table~\ref{tab:efa_factors} presents the ten student-block
+factors with their interpretive labels and primary items.
+
+\begin{table}[!htbp]
+\centering
+\caption{Student-Block EFA Factors --- Rural Sample
+(10 factors, 47 items)}
+\label{tab:efa_factors}
+\begin{tabular}{clp{4.5cm}}
+\toprule
+\textbf{F} & \textbf{Interpretive label} & \textbf{Primary items} \\
+\midrule
+1  & Cultural capital \& home resources   & ST254, ST251, ST250 \\
+2  & Academic motivation \& self-concept  & ST268Q07--09 \\
+3  & Digital home resources               & ST250D, ST251D \\
+4  & School belonging                     & ST265, ST034 \\
+5  & Violence \& school insecurity        & ST038, ST266 \\
+6  & Participation in maths classes       & ST297 \\
+7  & Creative school activities           & ST337 \\
+8  & Parental educational level           & ST006, ST008 \\
+9  & Mathematical self-concept            & ST263Q04, ST263Q06 \\
+10 & Teacher support for learning         & ST270 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Key structural differences between the national and rural factor
+solutions are shown in Table~\ref{tab:efa_comparison}. The
+reordering of the primary student factor --- from extracurricular
+participation (national) to cultural capital and home resources
+(rural) --- indicates that in rural contexts, material and
+educational resources in the home constitute the primary axis of
+student differentiation.
+
+\begin{table}[!htbp]
+\centering
+\caption{EFA Structural Comparison: National vs.\ Rural Sample}
+\label{tab:efa_comparison}
+\begin{tabular}{p{2.5cm}p{3.5cm}p{3.5cm}}
+\toprule
+\textbf{Dimension} & \textbf{National} & \textbf{Rural} \\
+\midrule
+F1 (student) &
+  Extracurricular participation &
+  Cultural capital \& home resources \\
+School Block A &
+  Processed (KMO=0.809) &
+  Excluded (KMO=0.485) \\
+Unique factors &
+  Art/creativity attitudes; perceived math ability &
+  Peer relations; parental education; teacher support \\
+Items retained & 235 & 198 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Stage 2 --- Item Response Theory Calibration}
+
+IRT calibration was applied to the 198~EFA-retained items using
+the GIRTH Python package~\cite{eribean2021girth}, which provides
+marginal maximum likelihood estimation for unidimensional IRT
+models. Two models were implemented: the Two-Parameter Logistic
+(2PL) model for dichotomous items, estimating discrimination
+($a$) and difficulty ($b$) parameters; and the Graded Response
+Model (GRM) for polytomous items (3--10 ordered categories).
+Items were retained if $a \geq 0.50$, a criterion more
+conservative than the commonly cited $a \geq
+0.35$~\cite{vanderlinden2016irt}, adopted to ensure only highly
+discriminating items entered the LCA.
+Table~\ref{tab:irt_results} presents calibration outcomes. The
+mean discrimination of retained items in the rural sample
+(1.109) exceeded that of the national sample (1.029),
+confirming that the rural item set captures sharper individual
+differences.
+
+\begin{table}[!htbp]
+\centering
+\caption{IRT Calibration Outcomes (Rural Sample)}
+\label{tab:irt_results}
+\begin{tabular}{lcccc}
+\toprule
+\textbf{Model} &
+  \makecell{\textbf{Items} \\ input} &
+  \makecell{\textbf{Retained}\\($a \geq 0.50$)} &
+  \textbf{Discarded} &
+  \makecell{\textbf{Mean}~$a$\\(retained)} \\
+\midrule
+2PL   &  38 &  21 &  17 & 1.878 \\
+GRM   & 160 & 108 &  52 & 0.960 \\
+\midrule
+\textbf{Total} & \textbf{198} & \textbf{129} &
+  \textbf{69} & \textbf{1.109} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+%% FIGURE 3 — IRT discrimination distribution
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=\textwidth]{graphics/fig3_irt_disc_vert.png}
+\caption{IRT discrimination parameter distribution ---
+national vs.\ rural sample. Vertical dashed line indicates
+the $a = 0.50$ retention threshold.}
+\label{fig:irt_discrimination}
+\end{figure}
+
+\subsection{Stage 3 --- Latent Class Analysis}
+
+LCA was conducted on the 129~retained items using
+StepMix~\cite{morin2025stepmix} with a categorical measurement
+model and one-step estimation (\texttt{measurement=}
+\texttt{"categorical"}, \texttt{n\_steps=1},
+\texttt{max\_iter=500}, \texttt{random\_state=42}). Models with
+2--8~classes were estimated and compared using four joint
+criteria: (1)~Bayesian Information Criterion (BIC; lower =
+better fit); (2)~relative entropy ($\geq 0.80$ indicates
+adequate classification certainty); (3)~minimum class size
+($\geq 5\%$ of sample, i.e.\ $\geq 186$~students for rural);
+and (4)~substantive interpretability. Class profiles were
+characterised through a two-layer strategy: Layer~1 used
+z-score standardised factor scores to describe each class along
+the EFA dimensions; Layer~2 validated classes against academic
+performance using the mean of all 30~plausible values across
+mathematics, reading, and science as a composite achievement
+score. Between-class differences were assessed via one-way
+ANOVA.
+
+%% ─────────────────────────────────────────────────────────────
+\section{Results}
+\label{sec:results}
+%% ─────────────────────────────────────────────────────────────
+
+\subsection{Preprocessing and Pipeline Replication}
+
+The preprocessing pipeline reduced the original 7,147~variables
+to 592~ordinal items for the national sample and 573~for the
+rural subsample (Table~\ref{tab:preprocessing}). The additional
+reduction in the rural sample reflects greater homogeneity in
+item response distributions, which caused more variables to fail
+the near-zero variance criterion.
+
+The complete pipeline was applied to PISA~2018 microdata
+(\(n = 6{,}086\)) following identical procedures, exclusively at
+the national level, to validate cross-cycle applicability rather
+than produce substantive 2018 profile interpretations.
+Table~\ref{tab:replication} confirms that the EFA--IRT--LCA
+sequence produces coherent and methodologically consistent
+results across cycles. Differences in retained variables
+(592~vs.\ 438) reflect genuine structural variation ---
+PISA~2022 introduced COVID-19 questionnaire modules and expanded
+financial literacy items absent in 2018 --- rather than pipeline
+instability. The consistency of entropy values (0.9796
+vs.\ 0.9730) and statistical significance of between-class
+differences ($F = 397.59$ and $F = 681.79$, both $p < .001$)
+confirm robust latent class solutions regardless of input cycle.
+
+\subsection{EFA: Latent Factor Structures}
+
+EFA identified 35~latent factors from 198~retained items across
+five processable blocks (Table~\ref{tab:efa_blocks}). The
+student block yielded ten factors (Table~\ref{tab:efa_factors}),
+with F1 identifying cultural capital and home resources as the
+primary axis of student differentiation in rural contexts ---
+contrasting with the national sample where extracurricular
+participation emerged as F1 (Table~\ref{tab:efa_comparison}).
+
+\subsection{IRT: Item Discrimination and Selection}
+
+Of the 198~EFA-retained items, IRT calibration retained
+129~for LCA (65.2\% retention rate). Table~\ref{tab:irt_results}
+presents calibration outcomes and Fig.~\ref{fig:irt_discrimination}
+shows the discrimination parameter distribution before and after
+filtering.
+
+\subsection{LCA: Model Selection}
+
+Table~\ref{tab:lca_fit} presents model fit indices for 2--8
+classes in the rural sample. The 4-class solution was selected
+as the only model satisfying all four criteria simultaneously.
+Models with five or more classes consistently produced at least
+one class below the 5\% minimum size threshold ($n < 186$),
+indicating insufficient statistical power for finer-grained
+profiles within the rural population. In the national sample,
+the BIC increased at 8~classes (clear inflection point),
+supporting a 7-class solution with all classes above 5\%
+(ANOVA $F = 397.59$, $p < .001$).
+
+\begin{table}[!htbp]
+\centering
+\caption{LCA Model Fit --- Rural Sample (2--8 Classes)}
+\label{tab:lca_fit}
+\begin{tabular}{lcccc}
+\toprule
+\textbf{Classes} & \textbf{BIC} & \textbf{Entropy} &
+  \makecell{\textbf{Min.\ class size (\%)}} &
+  \textbf{Viable} \\
+\midrule
+2 & 844,801 & 0.9997 & ---    & $\checkmark$ \\
+3 & 831,527 & 0.9640 & ---    & $\checkmark$ \\
+4 & 819,868 & 0.9753 & 17.2\% & $\checkmark$ \\
+5 & 815,989 & 0.9783 &  4.3\% & $\times$ \\
+6 & 813,541 & 0.9773 &  4.8\% & $\times$ \\
+7 & 811,454 & 0.9821 &  4.0\% & $\times$ \\
+8 & 809,780 & 0.9819 &  3.8\% & $\times$ \\
+\bottomrule
+\multicolumn{5}{l}{\footnotesize
+  $\times$ = min.\ class size $< 5\%$ ($n < 186$).}
+\end{tabular}
+\end{table}
+
+\subsection{LCA: Rural Student Profiles}
+
+Table~\ref{tab:lca_profiles} presents the four rural latent
+classes with their academic performance means and school context
+distribution. Class profiles are further characterised by
+standardised factor score profiles (Table~\ref{tab:lca_zscores}
+and Fig.~\ref{fig:heatmap_perf_class_rural}).
+
+\begin{table}[!htbp]
+\centering
+\caption{Rural Latent Class Profiles: Performance and Context}
+\label{tab:lca_profiles}
+\begin{tabular}{lcccc}
+\toprule
+\textbf{Class} &
+  \makecell{\textbf{Mean PV}\\(pts)} &
+  \textbf{SD} & \textbf{n (\%)} &
+  \makecell{\textbf{Private school \%}} \\
+\midrule
+1 High-performing  & 446.2 & 70.3 & 768 (20.6\%)   & 93.5\% \\
+2 Medium           & 398.3 & 67.7 & 938 (25.2\%)   &  0.0\% \\
+3 Medium-low       & 382.2 & 70.3 & 639 (17.2\%)   &  0.0\% \\
+4 Low-performing   & 354.7 & 59.0 & 1,375 (37.0\%) &  0.0\% \\
+\midrule
+\multicolumn{5}{l}{\footnotesize ANOVA: $F = 327.43$,
+  $p < .001$. PV = mean of 30 plausible values.}
+\end{tabular}
+\end{table}
+
+\begin{table}[!htbp]
+\centering
+\caption{Standardised Factor Scores (z) by Latent Class ---
+Top Discriminating Dimensions}
+\label{tab:lca_zscores}
+\begin{tabular}{lcccc}
+\toprule
+\textbf{Latent dimension} &
+  \textbf{C1} & \textbf{C2} & \textbf{C3} & \textbf{C4} \\
+\midrule
+School management type      & $+1.76$ & $-0.48$ & $-0.35$ & $-0.30$ \\
+School creativity climate   & $-0.40$ & $+0.34$ & $-1.12$ & $+0.52$ \\
+Financial literacy (basic)  & $+0.41$ & $+0.65$ & $+0.22$ & $-0.66$ \\
+Teacher support             & $+0.93$ & $-0.37$ & $-0.40$ & $-0.30$ \\
+Cultural capital            & $+0.78$ & $+0.23$ & $-0.26$ & $-0.47$ \\
+COVID-19 closure conditions & $+0.80$ & $-0.22$ & $-0.35$ & $-0.25$ \\
+Parental education          & $+0.57$ & $+0.18$ & $-0.15$ & $-0.26$ \\
+\bottomrule
+\multicolumn{5}{l}{\footnotesize
+  C1=High-performing; C2=Medium; C3=Medium-low; C4=Low.}
+\end{tabular}
+\end{table}
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=\textwidth]{graphics/fig5_heatmap_perf_clas_rural.png}
+\caption{Latent class profiles by EFA-derived latent variables.
+Rural sample ($n = 3{,}720$). Colour scale: blue (negative
+z-score) to red (positive z-score).}
+\label{fig:heatmap_perf_class_rural}
+\end{figure}
+
+\noindent\textbf{Class~1 --- High-achieving students in private
+rural schools (20.6\%):} Characterised by private school
+attendance (93.5\%), strong teacher support ($z = +0.93$), high
+cultural capital ($z = +0.78$), and favourable COVID-19 closure
+conditions ($z = +0.80$). School creativity climate scores are
+below average ($z = -0.40$), consistent with private schools
+having maintained instructional continuity during pandemic
+closures through pre-existing resources, without necessarily
+fostering a distinctive creativity-oriented school culture.
+
+\textbf{Class~2 --- Medium performers with financial literacy
+as protective capital (25.2\%):} Entirely composed of public
+school students (100\%). Distinguished by above-average
+financial literacy ($z = +0.65$ basic comprehension;
+$z = +0.53$ decision-making) despite below-average teacher
+support ($z = -0.37$) and public school governance
+($z = -0.48$). Practical financial knowledge, likely
+transmitted through family economic socialisation in rural
+contexts, functions as a compensatory capital that partially
+offsets institutional deficits.
+
+\textbf{Class~3 --- Medium-low performers with constrained
+school creativity climate (17.2\%):} The most rurally
+concentrated class (58.8\% in pure rural communities).
+Characterised by the most extreme school creativity climate
+deficit of any class ($z = -1.12$), low curricular planning in
+mathematics ($z = -0.40$), and limited institutional policies
+for digital technology ($z = -0.32$). This profile indicates
+that a distinct subgroup operates under constrained institutional
+conditions that limit students' exposure to creative and
+cognitively stimulating learning environments. Institutional
+preparation for remote instruction was also below average
+($z = -0.35$), indicating that constraints extended to pandemic
+response capacity~\cite{delprato2025covid}.
+
+\textbf{Class~4 --- Low-performing students with accumulated
+structural disadvantages (37.0\%):} The largest class,
+representing 37\% of rural students. Characterised by the
+lowest financial literacy ($z = -0.66$), lowest cultural
+capital ($z = -0.47$), and lowest parental education
+($z = -0.26$). Paradoxically, school creativity climate scores
+are moderately positive ($z = +0.52$), indicating that schools
+in this class are perceived as fostering creative environments,
+yet this does not translate into improved academic outcomes.
+This decoupling suggests that a positive school creativity
+climate alone is insufficient to overcome the accumulated
+family-level disadvantages that characterise this class.
+
+\subsection{National vs.\ Rural Profile Comparison}
+
+The national 7-class and rural 4-class solutions share the same
+dominant discriminating factor (school management type:
+$F = 2{,}057$ national; $F = 5{,}430$ rural), but the
+public--private divide is more extreme in rural contexts. The
+second discriminating dimension shifts from extracurricular
+participation (national, $F = 1{,}105$) to school creativity
+climate (rural, $F = 754$), indicating that in rural contexts
+the perceived quality of the school's creative and intellectual
+environment constitutes a more defining axis of student
+differentiation. The reduced number of classes (4~vs.\ 7)
+indicates greater contextual homogeneity in rural schooling,
+consistent with the structural constraints of rural educational
+systems.
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=\textwidth]{graphics/fig6_contexto_clases_rural_vert.png}
+\caption{Contextual characterisation of latent classes ---
+rural sample ($n = 3{,}720$).}
+\label{fig:context_class_rural}
+\end{figure}
+
+%% ─────────────────────────────────────────────────────────────
+\section{Discussion}
+\label{sec:discussion}
+%% ─────────────────────────────────────────────────────────────
+
+\subsection{The Primacy of School Management Type in Rural Peru}
+
+The most salient finding is the near-absolute segregation
+between private and public schooling as the primary determinant
+of latent class membership and academic achievement in rural
+Peru. The dominance of school management type as a
+discriminating factor ($F = 5{,}430$) --- with an effect nearly
+2.6~times stronger than in the national sample --- confirms and
+extends prior evidence on public--private inequalities in Latin
+America~\cite{delprato2025schools}. In rural contexts, where
+private school access is structurally limited but not absent,
+the students who do attend private institutions constitute a
+highly advantaged minority whose performance gap reflects
+accumulated advantages in teacher quality, cultural capital, and
+institutional resources. Strategies targeting rural education
+quality must distinguish between the very different
+institutional environments in which rural students are educated.
+
+\subsection{School Creativity Climate as a Differentiating
+Dimension Among Public Schools}
+
+The identification of Class~3 as a distinct profile
+characterised by a severely constrained school creativity
+climate ($z = -1.12$) --- concentrated in the most rural
+communities --- reveals that within the rural public school
+sector, not all students face the same institutional conditions.
+While Classes~2 and~4 show near-zero or positive creativity
+climate scores, Class~3 is defined by a substantially
+below-average institutional environment in which students have
+limited exposure to creative, cognitively stimulating
+activities. This subgroup (17.2\% of rural students) is
+distinguishable from Class~4 precisely because their lower
+performance is associated with constrained institutional
+conditions rather than family-level deprivation --- suggesting
+that targeted institutional strengthening programmes could have
+differential efficacy for these students compared to the broader
+structural interventions required for
+Class~4~\cite{delprato2025covid}.
+
+\subsection{Financial Literacy as Compensatory Capital}
+
+The emergence of financial literacy as a distinguishing
+dimension between Classes~2 and~4 --- both entirely composed of
+public school students --- suggests a mechanism that has
+received limited attention in the Latin American educational
+research literature. In rural economies where household
+financial management is a practical daily necessity, financial
+knowledge may function as a form of practical capital that
+supports cognitive development independently of formal school
+quality. This interpretation is consistent with
+Bourdieu's~\cite{bourdieu1986capital} framework of capital
+forms, extended here to include practical economic literacy as a
+context-specific variant of cultural capital.
+
+\subsection{Accumulated Disadvantage and the Limits of School
+Adaptation}
+
+The paradox identified in Class~4 --- where above-average
+school creativity climate scores ($z = +0.52$) coexist with the
+lowest academic performance ($M = 355$~pts) and the most severe
+family-level deficits --- points to a fundamental limitation of
+school-centred interventions in contexts of deep structural
+disadvantage~\cite{wang2024urbanrural,castro2022bonuses}. The
+implication is not that school creativity climate is irrelevant,
+but that its effects are contingent on a baseline level of
+family resources that a significant proportion of rural Peruvian
+students (37\%) currently lack.
+
+\subsection{Methodological Contribution}
+
+This study demonstrates the feasibility and analytical value of
+an integrated EFA--IRT--LCA pipeline applied to PISA microdata.
+The sequential logic --- EFA for dimension identification, IRT
+for psychometric item selection, LCA for person-centred
+classification --- produces interpretable typologies grounded in
+both statistical rigour and theoretical coherence. The
+pipeline's scalability (managing 7,147 initial variables down to
+129 analytically high-quality items) addresses a persistent
+challenge in secondary analysis of large-scale
+assessments~\cite{rutkowski2010secondary}. Cross-cycle
+validation on PISA~2018 further demonstrates that the framework
+is not cycle-specific and can be applied systematically to
+different assessment periods.
+
+%% ─────────────────────────────────────────────────────────────
+\section{Conclusions, Limitations, and Future Work}
+\label{sec:conclusions}
+%% ─────────────────────────────────────────────────────────────
+
+\subsection{Conclusions}
+
+This study applied an integrated EFA--IRT--LCA pipeline to
+PISA~2022 microdata to identify latent profiles of academic
+achievement among rural students in Peru. Four distinct profiles
+were identified, ranging from a high-performing minority in
+private schools (20.6\%) to a large vulnerable majority (37\%)
+characterised by accumulated family, educational, and financial
+disadvantages. The dominant structural determinant was school
+management type, whose segregating effect is substantially more
+pronounced in rural than in national contexts. Secondary
+determinants --- school creativity climate, financial literacy,
+and cultural capital --- further differentiate public-school
+students into meaningfully distinct subgroups with different
+intervention needs.
+
+Among the 35~factors extracted, school management type
+($F = 5{,}430$), school creativity climate ($F = 754$), family
+cultural capital ($F = 373$), and financial literacy ($F = 517$)
+emerged as the dimensions with the greatest discriminating power
+across student profiles. These factors correspond to
+identifiable, measurable conditions in students' school and
+family environments.
+
+Critically, the four latent profiles reveal that the rural
+public-school population is not homogeneous in its disadvantage:
+financial literacy functions as a compensatory resource in
+Class~2, a constrained school creativity climate defines
+Class~3, and accumulated family-level deficits characterise
+Class~4. This internal differentiation within the public-school
+sector has direct implications for how educational interventions
+are designed and targeted. From a computational and data science
+perspective, this study demonstrates that an integrated
+psychometric pipeline applied to large-scale assessment data can
+produce empirically grounded, actionable typologies that go
+substantially beyond what conventional analytical approaches
+yield from the same data.
+
+\subsection{Limitations}
+
+Several limitations should be considered. First, PISA~2022 does
+not provide subnational disaggregation for Peru; the rural
+subsample was operationally defined using community size
+(\texttt{SC001Q01TA}), which approximates but does not precisely
+capture regional characteristics such as those of Andean
+contexts. Second, the modular PISA booklet design produces
+structural missing data that cannot be fully resolved through
+imputation; the 40\% threshold represents a principled but
+necessarily arbitrary cutoff. Third, the 4-class selection
+reflects the statistical power constraints of the rural
+subsample ($n = 3{,}720$); a larger rural sample might support
+more refined profile differentiation. Fourth, the
+cross-sectional design of PISA precludes causal inference; the
+associations identified should be interpreted as descriptive
+rather than causal. Fifth, School Block~A variables could not
+be included in the rural analysis due to insufficient factorial
+structure (KMO~$= 0.485$), leaving school governance
+uncharacterised in the rural context.
+
+\subsection{Future Work}
+
+Application of the pipeline to Peru's ECE longitudinal data
+would enable regional disaggregation and causal inference.
+Extension to other LAC countries with rural subsamples in
+PISA~2022 would assess the generalisability of the identified
+profiles. The integration of geospatial analysis to examine the
+geographic distribution of latent classes within rural Peru
+could identify priority intervention areas. The development of a
+confirmatory version of the pipeline (CFA--2PL--LCA) would allow
+testing of hypotheses derived from these exploratory findings.
+The open-access API developed for this study currently serves
+PISA~2022 results; extending it to incorporate PISA~2018
+outputs would establish a longitudinal interface for tracking
+latent profile evolution across assessment periods.
+
+%% ─────────────────────────────────────────────────────────────
+%% Credits (required by Springer)
+%% ─────────────────────────────────────────────────────────────
+% \begin{credits}
+% \subsubsection{\ackname}
+% The authors used AI-assisted writing tools to support
+% manuscript preparation, including grammar correction,
+% language refinement, style improvement, and editorial
+% feedback. All AI-generated content was critically reviewed
+% and revised by the authors prior to inclusion. The authors
+% take full responsibility for the accuracy and integrity
+% of the work.
+
+% \subsubsection{\discintname}
+% The authors have no competing interests to declare that are
+% relevant to the content of this article.
+
+% \subsubsection{Author Contributions}
+% K.M. Arenas Cancapa: Conceptualization, Data curation,
+% Formal analysis, Investigation, Methodology, Software,
+% Visualization, Writing --- original draft.
+% E.R. Huiza Pereyra: Supervision, Writing --- review
+% and editing.
+
+% \end{credits}
+
+\begin{credits}
+\subsubsection{\discintname}
+Omitted for blind review.
+\end{credits}
+
+%% ─────────────────────────────────────────────────────────────
+%% Bibliography
+%% ─────────────────────────────────────────────────────────────
+\bibliographystyle{splncs04}
+\bibliography{references_springer}
+
+\end{document}
