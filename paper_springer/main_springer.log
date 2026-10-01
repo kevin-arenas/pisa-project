@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2026.5.11)  30 SEP 2026 21:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2026.5.11)  30 SEP 2026 21:59
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -554,12 +554,16 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 LaTeX Font Info:    Trying to load font information for U+msb on input line 52.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1
+)
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 52.
+ (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 2022/07/10 v2.5l Standard LaTeX font definitions
+)
+Underfull \vbox (badness 1960) has occurred while \output is active []
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
-Underfull \vbox (badness 2158) has occurred while \output is active []
+ [1
 
- [2]
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}] [2]
 Overfull \hbox (2.81879pt too wide) in paragraph at lines 196--208
 \T1/cmr/m/n/10 tional in-stru-ments for di-ag-nos-ing ed-u-ca-tional in-equal-i-ties and in-form-ing evidence-
  []
@@ -569,21 +573,15 @@ Overfull \hbox (0.46082pt too wide) in paragraph at lines 246--256
 []\T1/cmr/m/n/10 Latent Class Anal-y-sis (LCA) ex-tends the la-tent vari-able frame-work to person-
  []
 
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 298.
-(/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
-File: t1cmtt.fd 2022/07/10 v2.5l Standard LaTeX font definitions
-) [4] [5]
+[4]
 Package svg Info: Last page of `./svg-inkscape/pipeline_svg-tex.pdf' is 1 on input line 384.
  (./svg-inkscape/pipeline_svg-tex.pdf_tex
-<./svg-inkscape/pipeline_svg-tex.pdf, id=130, page=1, 264.23718pt x 423.08063pt>
+<./svg-inkscape/pipeline_svg-tex.pdf, id=122, page=1, 264.23718pt x 423.08063pt>
 File: ./svg-inkscape/pipeline_svg-tex.pdf Graphic file (type pdf)
 <use ./svg-inkscape/pipeline_svg-tex.pdf, page 1>
 Package pdftex.def Info: ./svg-inkscape/pipeline_svg-tex.pdf , page1 used on input line 56.
 (pdftex.def)             Requested size: 208.27623pt x 333.48117pt.
-)
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [6 <./svg-inkscape/pipeline_svg-tex.pdf>] [7]
+) [5] [6 <./svg-inkscape/pipeline_svg-tex.pdf>] [7]
 Underfull \hbox (badness 3568) in paragraph at lines 526--526
 []|\T1/cmr/m/n/9 Extracurricular par-tic-i-
  []
@@ -594,7 +592,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 529--529
  []
 
 [8]
-<graphics/fig3_irt_disc_vert.png, id=262, 428.5611pt x 139.4811pt>
+<graphics/fig3_irt_disc_vert.png, id=265, 428.5611pt x 139.4811pt>
 File: graphics/fig3_irt_disc_vert.png Graphic file (type png)
 <use graphics/fig3_irt_disc_vert.png>
 Package pdftex.def Info: graphics/fig3_irt_disc_vert.png  used on input line 582.
@@ -615,7 +613,7 @@ Overfull \hbox (2.2356pt too wide) in paragraph at lines 624--638
  []
 
 [10 <./graphics/fig3_irt_disc_vert.png>]
-<graphics/fig5_heatmap_perf_clas_rural.png, id=291, 526.6074pt x 846.2817pt>
+<graphics/fig5_heatmap_perf_clas_rural.png, id=294, 526.6074pt x 846.2817pt>
 File: graphics/fig5_heatmap_perf_clas_rural.png Graphic file (type png)
 <use graphics/fig5_heatmap_perf_clas_rural.png>
 Package pdftex.def Info: graphics/fig5_heatmap_perf_clas_rural.png  used on input line 747.
@@ -628,7 +626,7 @@ LaTeX Warning: Float too large for page by 42.9615pt on input line 752.
 Underfull \vbox (badness 2538) has occurred while \output is active []
 
  [13]
-<graphics/fig6_contexto_clases_rural_vert.png, id=316, 572.8602pt x 211.7511pt>
+<graphics/fig6_contexto_clases_rural_vert.png, id=319, 572.8602pt x 211.7511pt>
 File: graphics/fig6_contexto_clases_rural_vert.png Graphic file (type png)
 <use graphics/fig6_contexto_clases_rural_vert.png>
 Package pdftex.def Info: graphics/fig6_contexto_clases_rural_vert.png  used on input line 820.
@@ -673,18 +671,18 @@ Package rerunfilecheck Info: File `main_springer.out' has not changed.
 (rerunfilecheck)             Checksum: 224BC4FE5CC732C92478E0FD4F6DCDA2;682.
  ) 
 Here is how much of TeX's memory you used:
- 13278 strings out of 476041
- 220801 string characters out of 5793174
+ 13282 strings out of 476041
+ 220842 string characters out of 5793174
  1867388 words of memory out of 6000000
- 33378 multiletter control sequences out of 15000+600000
- 526119 words of font info for 65 fonts, out of 8000000 for 9000
+ 33380 multiletter control sequences out of 15000+600000
+ 527200 words of font info for 67 fonts, out of 8000000 for 9000
  1137 hyphenation exceptions out of 8191
  94i,16n,92p,815b,594s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfbx0900.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on main_springer.pdf (18 pages, 1041420 bytes).
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfbx0900.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sftt0900.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
+Output written on main_springer.pdf (18 pages, 1085081 bytes).
 PDF statistics:
- 498 PDF objects out of 1000 (max. 8388607)
- 355 compressed objects within 4 object streams
+ 513 PDF objects out of 1000 (max. 8388607)
+ 364 compressed objects within 4 object streams
  86 named destinations out of 1000 (max. 500000)
  46 words of extra memory for PDF output out of 10000 (max. 10000000)
 
