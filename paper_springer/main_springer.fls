@@ -1,8 +1,8 @@
-PWD /run/media/kevin/Disco local2/projects/university/tesis/pisa-project/paper_springer
+PWD /run/media/kevin/Disco local/projects/university/tesis/pisa-project/paper_springer
 INPUT /usr/share/texlive/texmf-dist/web2c/texmf.cnf
 INPUT /usr/share/texlive/texmf-dist/web2c/texmf.cnf
 INPUT /var/lib/texmf/web2c/pdftex/pdflatex.fmt
-INPUT /run/media/kevin/Disco local2/projects/university/tesis/pisa-project/paper_springer/main_springer.tex
+INPUT /run/media/kevin/Disco local/projects/university/tesis/pisa-project/paper_springer/main_springer.tex
 OUTPUT main_springer.log
 INPUT ./llncs.cls
 INPUT ./llncs.cls
