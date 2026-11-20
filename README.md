@@ -14,7 +14,7 @@ The pipeline combines **Exploratory Factor Analysis (EFA)**, **Item Response The
 | Items retained by IRT (a ≥ 0.50) | 129 | 152 | 161 |
 | LCA solution | 4 classes (entropy 0.9753) | 7 classes | see paper |
 
-**Results API:** `<URL pending>`
+**Results API:** temporarily offline. All processed outputs are available in [`results/`](results/).
 
 ## 1. Get the PISA microdata
 
@@ -93,7 +93,7 @@ results/2022/national/
 results/2018/national/   # replication
 ```
 
-They are also available through the results API (see above).
+They will also be available through the results API (see above).
 
 ## 6. License
 
