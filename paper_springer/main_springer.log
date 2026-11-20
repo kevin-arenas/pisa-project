@@ -1,6 +1,7 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2026.5.11)  30 SEP 2026 21:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2026.5.11)  30 SEP 2026 23:41
 entering extended mode
- \write18 enabled.
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
  %&-line parsing enabled.
 **"/run/media/kevin/Disco local/projects/university/tesis/pisa-project/paper_springer/main_springer.tex"
 (/run/media/kevin/Disco local/projects/university/tesis/pisa-project/paper_springer/main_springer.tex
@@ -318,21 +319,7 @@ Package pdftexcmds Info: \pdfdraftmode found.
 Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 ) (/usr/share/texlive/texmf-dist/tex/latex/tools/shellesc.sty
 Package: shellesc 2019/11/08 v1.0c unified shell escape interface for LaTeX
-Package shellesc Info: Unrestricted shell escape enabled on input line 75.
-) (/usr/share/texlive/texmf-dist/tex/latex/ifplatform/ifplatform.sty
-Package: ifplatform 2017/10/13 v0.4a Testing for the operating system
- (/usr/share/texlive/texmf-dist/tex/generic/catchfile/catchfile.sty
-Package: catchfile 2019/12/09 v1.8 Catch the contents of a file (HO)
- (/usr/share/texlive/texmf-dist/tex/generic/etexcmds/etexcmds.sty
-Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
-)) (/usr/share/texlive/texmf-dist/tex/generic/iftex/ifluatex.sty
-Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
-)
-runsystem(uname -s > "main_springer.w18")...executed.
-
- (./main_springer.w18)
-runsystem(rm -- "main_springer.w18")...executed.
-
+Package shellesc Info: Restricted shell escape enabled on input line 77.
 )
 \c@svg@param@lastpage=\count307
 \svg@box=\box102
@@ -441,6 +428,8 @@ Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 ) (/usr/share/texlive/texmf-dist/tex/generic/intcalc/intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+) (/usr/share/texlive/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
 \Hy@SavedSpaceFactor=\count319
  (/usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def
@@ -505,24 +494,24 @@ File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
 ) (./main_springer.aux)
 \openout1 = `main_springer.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
  (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count328
@@ -542,147 +531,124 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-Package hyperref Info: Link coloring OFF on input line 32.
+Package hyperref Info: Link coloring OFF on input line 33.
  (./main_springer.out) (./main_springer.out)
 \@outlinefile=\write4
 \openout4 = `main_springer.out'.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 52.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 53.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 52.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 53.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 52.
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 53.
  (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2022/07/10 v2.5l Standard LaTeX font definitions
+) [1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [2] [3] [4] [5] [6]
+Package svg Info: Last page of `./svg-inkscape/fig1_pipeline_v4_svg-tex.pdf' is 1 on input line 479.
+ (./svg-inkscape/fig1_pipeline_v4_svg-tex.pdf_tex
+<./svg-inkscape/fig1_pipeline_v4_svg-tex.pdf, id=138, page=1, 273.23329pt x 447.35883pt>
+File: ./svg-inkscape/fig1_pipeline_v4_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/fig1_pipeline_v4_svg-tex.pdf, page 1>
+Package pdftex.def Info: ./svg-inkscape/fig1_pipeline_v4_svg-tex.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 208.27623pt x 341.02016pt.
 )
-Underfull \vbox (badness 1960) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [1
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}] [2]
-Overfull \hbox (2.81879pt too wide) in paragraph at lines 196--208
-\T1/cmr/m/n/10 tional in-stru-ments for di-ag-nos-ing ed-u-ca-tional in-equal-i-ties and in-form-ing evidence-
- []
-
-[3]
-Overfull \hbox (0.46082pt too wide) in paragraph at lines 246--256
-[]\T1/cmr/m/n/10 Latent Class Anal-y-sis (LCA) ex-tends the la-tent vari-able frame-work to person-
- []
-
-[4]
-Package svg Info: Last page of `./svg-inkscape/pipeline_svg-tex.pdf' is 1 on input line 384.
- (./svg-inkscape/pipeline_svg-tex.pdf_tex
-<./svg-inkscape/pipeline_svg-tex.pdf, id=122, page=1, 264.23718pt x 423.08063pt>
-File: ./svg-inkscape/pipeline_svg-tex.pdf Graphic file (type pdf)
-<use ./svg-inkscape/pipeline_svg-tex.pdf, page 1>
-Package pdftex.def Info: ./svg-inkscape/pipeline_svg-tex.pdf , page1 used on input line 56.
-(pdftex.def)             Requested size: 208.27623pt x 333.48117pt.
-) [5] [6 <./svg-inkscape/pipeline_svg-tex.pdf>] [7]
-Underfull \hbox (badness 3568) in paragraph at lines 526--526
-[]|\T1/cmr/m/n/9 Extracurricular par-tic-i-
+ [7] [8 <./svg-inkscape/fig1_pipeline_v4_svg-tex.pdf>] [9]
+Underfull \hbox (badness 1558) in paragraph at lines 653--653
+[]|\T1/cmr/m/n/9 Extracurricular par-tic-i-pa-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 529--529
-[]|\T1/cmr/m/n/9 Processed
- []
-
-[8]
-<graphics/fig3_irt_disc_vert.png, id=265, 428.5611pt x 139.4811pt>
-File: graphics/fig3_irt_disc_vert.png Graphic file (type png)
-<use graphics/fig3_irt_disc_vert.png>
-Package pdftex.def Info: graphics/fig3_irt_disc_vert.png  used on input line 582.
-(pdftex.def)             Requested size: 347.12354pt x 112.9833pt.
-
-Overfull \hbox (0.34717pt too wide) in paragraph at lines 591--609
-\T1/cmr/m/n/10 cal mea-sure-ment model and one-step es-ti-ma-tion (\T1/cmtt/m/n/10 measurement= "categorical"\T1/cmr/m/n/10 ,
- []
-
-[9]
-Overfull \hbox (7.48322pt too wide) in paragraph at lines 624--638
-\T1/cmr/m/n/10 Ta-ble []1[] con-firms that the EFA--IRT--LCA se-quence pro-duces co-her-ent and method-
+Underfull \hbox (badness 5985) in paragraph at lines 654--655
+[]|\T1/cmr/m/n/9 Household so-cioe-co-nomic
  []
 
 
-Overfull \hbox (2.2356pt too wide) in paragraph at lines 624--638
-\T1/cmr/m/n/10 olog-i-cally con-sis-tent re-sults across cy-cles. Dif-fer-ences in re-tained vari-ables (592 vs.
- []
-
-[10 <./graphics/fig3_irt_disc_vert.png>]
-<graphics/fig5_heatmap_perf_clas_rural.png, id=294, 526.6074pt x 846.2817pt>
-File: graphics/fig5_heatmap_perf_clas_rural.png Graphic file (type png)
-<use graphics/fig5_heatmap_perf_clas_rural.png>
-Package pdftex.def Info: graphics/fig5_heatmap_perf_clas_rural.png  used on input line 747.
-(pdftex.def)             Requested size: 347.12354pt x 557.85033pt.
-
-
-LaTeX Warning: Float too large for page by 42.9615pt on input line 752.
-
-[11] [12 <./graphics/fig5_heatmap_perf_clas_rural.png>]
-Underfull \vbox (badness 2538) has occurred while \output is active []
-
- [13]
-<graphics/fig6_contexto_clases_rural_vert.png, id=319, 572.8602pt x 211.7511pt>
-File: graphics/fig6_contexto_clases_rural_vert.png Graphic file (type png)
-<use graphics/fig6_contexto_clases_rural_vert.png>
-Package pdftex.def Info: graphics/fig6_contexto_clases_rural_vert.png  used on input line 820.
-(pdftex.def)             Requested size: 347.12354pt x 128.31174pt.
- [14 <./graphics/fig6_contexto_clases_rural_vert.png>]
-Overfull \hbox (6.84558pt too wide) in paragraph at lines 872--884
-\T1/cmr/m/n/10 The emer-gence of fi-nan-cial lit-er-acy as a dis-tin-guish-ing di-men-sion be-tween Classes 2
+Underfull \hbox (badness 10000) in paragraph at lines 659--659
+[]|\T1/cmr/m/n/9 Art/creativity at-ti-tudes;
  []
 
 
-Overfull \hbox (0.62488pt too wide) in paragraph at lines 901--914
-\T1/cmr/m/n/10 dresses a per-sis-tent chal-lenge in sec-ondary anal-y-sis of large-scale as-sess-ments [[]].
- []
-
-[15] [16] (./main_springer.bbl [17]
-Underfull \hbox (badness 10000) in paragraph at lines 46--47
-[]\T1/cmr/m/n/9 Organisation for Eco-nomic Co-operation and De-vel-op-ment: PISA
+Underfull \hbox (badness 1348) in paragraph at lines 659--659
+\T1/cmr/m/n/9 math self-perception and
  []
 
 
-Underfull \hbox (badness 5288) in paragraph at lines 46--47
-\T1/cmr/m/n/9 2022 re-sults (vol-ume I and II): Coun-try notes --- peru. Tech. rep.,
+Underfull \hbox (badness 3482) in paragraph at lines 660--662
+[]|\T1/cmr/m/n/9 Participation in cre-ative
+ []
+
+[10] [11] [12]
+<graphics/fig2_irt_disc_v4.png, id=299, 428.6925pt x 139.6125pt>
+File: graphics/fig2_irt_disc_v4.png Graphic file (type png)
+<use graphics/fig2_irt_disc_v4.png>
+Package pdftex.def Info: graphics/fig2_irt_disc_v4.png  used on input line 802.
+(pdftex.def)             Requested size: 347.12354pt x 113.04713pt.
+ [13] [14 <./graphics/fig2_irt_disc_v4.png>] [15]
+Underfull \vbox (badness 1102) has occurred while \output is active []
+
+ [16] [17]
+<graphics/fig3_context_classes_rural_v4.png, id=339, 469.4265pt x 173.448pt>
+File: graphics/fig3_context_classes_rural_v4.png Graphic file (type png)
+<use graphics/fig3_context_classes_rural_v4.png>
+Package pdftex.def Info: graphics/fig3_context_classes_rural_v4.png  used on input line 1101.
+(pdftex.def)             Requested size: 347.12354pt x 128.26216pt.
+ [18] [19 <./graphics/fig3_context_classes_rural_v4.png>]
+<graphics/fig4_heatmap_rural_v4.png, id=352, 374.49pt x 603.126pt>
+File: graphics/fig4_heatmap_rural_v4.png Graphic file (type png)
+<use graphics/fig4_heatmap_rural_v4.png>
+Package pdftex.def Info: graphics/fig4_heatmap_rural_v4.png  used on input line 1169.
+(pdftex.def)             Requested size: 279.60966pt x 450.2974pt.
+
+Underfull \vbox (badness 1454) has occurred while \output is active []
+
+ [20 <./graphics/fig4_heatmap_rural_v4.png>] [21] [22] [23] [24]
+Overfull \hbox (0.40094pt too wide) in paragraph at lines 1465--1472
+ []\T1/cmr/bx/n/9 Acknowledgments.[] \T1/cmr/m/n/9 The au-thors used AI-assisted writ-ing tools to sup-port manuscript
+ []
+
+(./main_springer.bbl [25]
+Underfull \hbox (badness 10000) in paragraph at lines 69--72
+\T1/cmr/m/n/9 rep., OECD (2023), avail-able at: [][]$https : / / www . oecd . org / en / publications /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 46--47
-\T1/cmr/m/n/9 OECD (2023), avail-able at: [][]$https : / / www . oecd . org / en / publications /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 46--47
+Underfull \hbox (badness 10000) in paragraph at lines 69--72
 \T1/cmr/m/n/9 pisa-[]2022-[]results-[]volume-[]i-[]and-[]ii-[]country-[]notes _ ed6fbcc5-[]en / peru _ 3e71791c-[]en .
  []
 
-
-Underfull \hbox (badness 1024) in paragraph at lines 52--53
+[26]
+Underfull \hbox (badness 1024) in paragraph at lines 103--107
 \T1/cmr/m/n/9 tify pre-dic-tors of Brazil-ian stu-dents' pro-fi-ciency in PISA 2018. Jour-nal of
  []
 
-) [18] (./main_springer.aux)
+) [27] (./main_springer.aux)
 Package rerunfilecheck Info: File `main_springer.out' has not changed.
 (rerunfilecheck)             Checksum: 224BC4FE5CC732C92478E0FD4F6DCDA2;682.
  ) 
 Here is how much of TeX's memory you used:
- 13282 strings out of 476041
- 220842 string characters out of 5793174
- 1867388 words of memory out of 6000000
- 33380 multiletter control sequences out of 15000+600000
+ 13183 strings out of 476041
+ 218447 string characters out of 5793174
+ 1869388 words of memory out of 6000000
+ 33284 multiletter control sequences out of 15000+600000
  527200 words of font info for 67 fonts, out of 8000000 for 9000
  1137 hyphenation exceptions out of 8191
- 94i,16n,92p,815b,594s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfbx0900.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sftt0900.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on main_springer.pdf (18 pages, 1085081 bytes).
+ 94i,16n,92p,815b,596s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfbx0900.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfti0900.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sftt0900.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
+Output written on main_springer.pdf (27 pages, 868848 bytes).
 PDF statistics:
- 513 PDF objects out of 1000 (max. 8388607)
- 364 compressed objects within 4 object streams
- 86 named destinations out of 1000 (max. 500000)
+ 549 PDF objects out of 1000 (max. 8388607)
+ 396 compressed objects within 4 object streams
+ 97 named destinations out of 1000 (max. 500000)
  46 words of extra memory for PDF output out of 10000 (max. 10000000)
 

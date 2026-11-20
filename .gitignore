@@ -1,4 +1,8 @@
 data/
+word-paper/
+paper/
+paper_springer/
+file/
 
 __pycache__/
 .ipynb_checkpoints/
