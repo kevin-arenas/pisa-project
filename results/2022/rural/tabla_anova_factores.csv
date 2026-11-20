@@ -1,0 +1,32 @@
+factor,nombre,F,p_valor,rango_medias
+F1_escuela_c,School management and governance,5430.0,0.0,2.342
+F3_escuela_c,Students' creativity and creative potential,754.48,0.0,1.641
+F1_finanzas,Financial and digital literacy,516.8,0.0,1.304
+F1_escuela_b,Professional development of mathematics teachers,446.78,0.0,1.302
+F1_estudiante,Household socioeconomic resources,372.97,0.0,1.246
+F5_escuela_c,Educational conditions and response during COVID-19 school closures,258.01,0.0,1.081
+F4_finanzas,Use of digital financial services,252.39,0.0,0.998
+F2_finanzas,Financial education content,154.52,0.0,0.779
+F8_estudiante,Parents' educational attainment,132.46,0.0,0.829
+F2_escuela_c,Institutional readiness for remote education,128.7,0.0,0.707
+F7_finanzas,Family financial socialization,88.75,0.0,0.587
+F6_escuela_c,School creativity climate,84.93,0.0,0.708
+F3_escuela_b,Mathematics curriculum planning,74.93,0.0,0.587
+F6_finanzas,Financial education activities,64.78,0.0,0.565
+F6_estudiante,Support for mathematics learning,44.39,0.0,0.479
+F2_escuela_b,Impact of teacher evaluation,38.46,0.0,0.482
+F1_otros,Student educational trajectory,37.53,0.0,0.458
+F2_estudiante,Academic motivation and self-concept,34.72,0.0,0.454
+F4_escuela_c,Use of external assessments for school improvement,34.05,0.0,0.454
+F4_escuela_b,School policies for the use of digital technologies,30.01,0.0,0.444
+F8_finanzas,Exposure to financial education at school,27.4,0.0,0.356
+F3_estudiante,Household resources (country-specific items),17.71,0.0,0.263
+F5_estudiante,School victimization and insecurity,13.59,0.0,0.285
+F10_estudiante,Teacher support for learning,11.84,0.0,0.237
+F5_finanzas,Basic financial concepts learned at school,10.34,0.0,0.226
+F6_escuela_b,School management for student development,9.08,0.0,0.268
+F5_escuela_b,Qualifications of part-time mathematics teachers,8.24,0.0,0.225
+F3_finanzas,Financial attitudes and behaviors,6.96,0.0001,0.184
+F7_estudiante,Participation in school creative activities,4.87,0.0022,0.151
+F9_estudiante,Beliefs about academic ability,4.4,0.0042,0.167
+F4_estudiante,School safety and sense of belonging,0.03,0.9945,0.011

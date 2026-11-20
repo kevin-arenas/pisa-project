@@ -1,0 +1,38 @@
+factor,nombre,F,p_valor,rango_medias
+F1_otros,Institutional characteristics and autonomy,6577.49,0.0,2.22
+F1_escuela_c,Autonomy and school administrative management,2057.13,0.0,1.927
+F1_estudiante,Participation in extracurricular activities,1105.33,0.0,1.679
+F2_escuela_c,Promotion of creativity and innovative thinking,344.24,0.0,1.876
+F3_escuela_a,Institutional conditions and resources,342.39,0.0,1.334
+F1_finanzas,Financial and digital competence,320.53,0.0,1.34
+F2_estudiante,Socioeconomic level and household resources,299.1,0.0,1.381
+F5_escuela_a,Institutional quality management and mechanisms,220.59,0.0,1.009
+F6_escuela_c,"Academic, creative and innovative profile of the students",191.24,0.0,1.517
+F8_estudiante,Additional educational support in mathematics,180.43,0.0,1.122
+F4_escuela_a,Barriers to teaching and learning,177.41,0.0,0.905
+F3_finanzas,Digital financial behavior,170.29,0.0,1.064
+F1_escuela_b,Mathematics teacher professional development,164.9,0.0,0.857
+F2_finanzas,Financial and investment knowledge,125.9,0.0,0.879
+F3_escuela_c,Institutional preparation for remote education,96.42,0.0,0.961
+F5_escuela_c,Beliefs about creativity and barriers to learning,90.41,0.0,0.675
+F2_otros,Academic characteristics and school career,66.09,0.0,0.702
+F6_finanzas,Applied financial education and responsible consumption,64.56,0.0,0.664
+F5_estudiante,Artistic Sensitivity and Creative Thinking,55.91,0.0,0.672
+F4_estudiante,Motivation and academic self-confidence,52.74,0.0,0.635
+F2_escuela_a,Strategic use of standardized assessment,50.82,0.0,0.797
+F4_escuela_b,Standards and management of the use of digital technologies,42.16,0.0,0.745
+F7_finanzas,Exposure to interdisciplinary financial content,39.65,0.0,0.593
+F2_escuela_b,Incentives and teaching recognition,38.57,0.0,0.536
+F5_escuela_b,Mathematics teacher qualification,31.32,0.0,0.432
+F1_escuela_a,Institutional management and evaluation,30.48,0.0,0.61
+F8_finanzas,Family financial socialization,26.95,0.0,0.447
+F3_estudiante,School violence and conflict,24.73,0.0,0.523
+F3_escuela_b,Curricular orientation and evaluation of the mathematics program,23.22,0.0,0.557
+F6_estudiante,Household resources (country-specific items),16.78,0.0,0.351
+F4_finanzas,Financial autonomy and self-regulation,15.82,0.0,0.282
+F6_escuela_a,Institutional capacity for technological integration,15.43,0.0,0.356
+F6_escuela_b,Inclusion and participation of the educational community,11.47,0.0,0.387
+F4_escuela_c,Using external evaluation for school improvement,9.66,0.0,0.316
+F5_finanzas,Basic financial education,9.22,0.0,0.259
+F9_estudiante,Anxiety and self-perception of academic competence,6.65,0.0,0.236
+F7_estudiante,School Safety and Belonging,6.6,0.0,0.206
