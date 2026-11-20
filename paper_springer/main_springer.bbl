@@ -1,0 +1,116 @@
+\begin{thebibliography}{10}
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\urlprefix}{URL }
+\providecommand{\doi}[1]{https://doi.org/#1}
+
+\bibitem{alvarezgarcia2024profiles}
+Alvarez-Garcia, M., Arenas-Parra, M., Ibar-Alonso, R.: Uncovering student
+  profiles: An explainable cluster analysis approach to {PISA} 2022. Computers
+  \& Education  \textbf{223},  105166 (2024), available at:
+  \url{https://digibuo.uniovi.es/dspace/handle/10651/76089}
+
+\bibitem{eribean2021girth}
+Bean, R.C.: {GIRTH}: A {Python} package for {Item Response Theory} (version
+  0.8.0) [software] (2021), gitHub. Available at:
+  \url{https://github.com/eribean/girth}
+
+\bibitem{bourdieu1986capital}
+Bourdieu, P.: The forms of capital. In: Richardson, J. (ed.) Handbook of Theory
+  and Research for the Sociology of Education, pp. 241--258. Greenwood (1986)
+
+\bibitem{castro2022bonuses}
+Castro, J.F., Esposito, B.: The effect of bonuses on teacher retention and
+  student learning in rural schools. Education Finance and Policy  \textbf{17},
+   693--718 (2022), \doi{10.1162/edfp\_a\_00348}
+
+\bibitem{collins2010latent}
+Collins, L.M., Lanza, S.T.: Latent Class and Latent Transition Analysis: With
+  Applications in the Social, Behavioral, and Health Sciences. Wiley (2010),
+  \doi{10.1002/9780470567333}
+
+\bibitem{delprato2025resilience}
+Delprato, M.: Determinants of {Latin American} students academic
+  resilience---insights based on {PISA} 2022 using an explainable machine
+  learning approach (2025), arXiv: 2509.24830v1. Available at:
+  \url{https://arxiv.org/html/2509.24830v1}
+
+\bibitem{delprato2025covid}
+Delprato, M.: Effects of {COVID-19} education policies on students' learning
+  proficiency in {Latin America}: Insights from {PISA} 2022. International
+  Journal of Educational Development  (2025), available at:
+  \url{https://www.sciencedirect.com/science/article/pii/S0738059325002810}
+
+\bibitem{djekourmane2025capital}
+Djekourmane, D., Zhang, Y., Li, M., Cai, Z.: Family cultural capital predicts
+  student cognitive performance: The mediating role of student academic
+  engagement and academic self-efficacy in a comparative cross-national
+  context. PLOS ONE  \textbf{20}(10),  e0329770 (2025),
+  \doi{10.1371/journal.pone.0329770}
+
+\bibitem{fabrigar1999efa}
+Fabrigar, L.R., Wegener, D.T., MacCallum, R.C., Strahan, E.J.: Evaluating the
+  use of exploratory factor analysis in psychological research. Psychological
+  Methods  \textbf{4}(3),  272--299 (1999), \doi{10.1037/1082-989X.4.3.272}
+
+\bibitem{minedu2024pisareporte}
+{Ministerio de Educaci{\'o}n del Per{\'u}}: Reporte de resultados {PISA} 2022
+  {Per{\'u}}. Tech. rep., Oficina de Medici{\'o}n de la Calidad de los
+  Aprendizajes (2024), available at:
+  \url{http://umc.minedu.gob.pe/wp-content/uploads/2024/02/Reporte_de_resultados_PISA_2022_Per\%C3\%BA.pdf}
+
+\bibitem{morin2025stepmix}
+Morin, S., Legault, R., Lalibert{\'e}, F., Bakk, Z., Gigu{\`e}re, C.{\'E}., {de
+  la Sablonni{\`e}re}, R., Lacourse, {\'E}.: {StepMix}: A {Python} package for
+  pseudo-likelihood estimation of generalised mixture models with external
+  variables. Journal of Statistical Software  \textbf{113}(8),  1--39 (2025),
+  \doi{10.18637/jss.v113.i08}
+
+\bibitem{oecd2023pisaPeru}
+{OECD}: {PISA} 2022 results (volume {I} and {II}): Country notes --- peru.
+  Tech. rep., OECD (2023), available at:
+  \url{https://www.oecd.org/en/publications/pisa-2022-results-volume-i-and-ii-country-notes_ed6fbcc5-en/peru_3e71791c-en.html}
+
+\bibitem{oecd2024technical}
+{OECD}: {PISA} 2022 technical report. Tech. rep., OECD Publishing (2024),
+  \doi{10.1787/01820d6d-en}
+
+\bibitem{pagliarani2025schools}
+Pagliarani, S.: Improving the performance of public schools: Evidence from
+  {Latin American} countries in {PISA} 2022. Journal of Latinos and Education
+  \textbf{25}(1),  183--196 (2025), \doi{10.1080/15348431.2025.2501990}
+
+\bibitem{repo2025wellbeing}
+Repo, J., Reimer, D., Kilpi-Jakonen, E.: Stability in student well-being and
+  educational disparities across the pandemic: A latent profile analysis of
+  {PISA} 2018 and 2022 in {Finland}, {Sweden}, and {Iceland}. Large-Scale
+  Assessments in Education  \textbf{13}, ~16 (2025),
+  \doi{10.1186/s40536-025-00251-0}
+
+\bibitem{rojasapaza2024urbanrural}
+{Rojas Apaza}, R., {Paz Paredes}, R., Arpi, R., {Quispe Lino}, C.N., Chura-Zea,
+  E.: Urban--rural gap in education performance in {Peruvian} public
+  institutions during 2018: An analysis using the {Oaxaca-Blinder}
+  decomposition. Frontiers in Education  \textbf{9},  1394938 (2024),
+  \doi{10.3389/feduc.2024.1394938}
+
+\bibitem{rutkowski2010secondary}
+Rutkowski, L., Gonzalez, E., Joncas, M., {von Davier}, M.: International
+  large-scale assessment data: Issues in secondary analysis and reporting.
+  Educational Researcher  \textbf{39}(2),  142--151 (2010).
+  \doi{10.3102/0013189X10363170}
+
+\bibitem{soares2024predictors}
+Soares, P.S.M.: Combining statistical and machine learning methods to identify
+  predictors of {Brazilian} students' proficiency in {PISA} 2018. Journal of
+  Psychoeducational Assessment  \textbf{42}(8),  927--954 (2024),
+  \doi{10.1177/07342829241262861}
+
+\bibitem{vanderlinden2016irt}
+{van der Linden}, W.J. (ed.): Handbook of Item Response Theory. Chapman and
+  Hall/CRC (2016), \doi{10.1201/9781315374512}
+
+\bibitem{vondavier2009plausible}
+{von Davier}, M., Gonzalez, E., Mislevy, R.J.: What are plausible values and
+  why are they useful? IERI Monograph Series  \textbf{2},  9--36 (2009)
+
+\end{thebibliography}
